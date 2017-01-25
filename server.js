@@ -12,7 +12,7 @@ app.use((req, res, next)=> {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
 
-  fs.appendFile('server.long', log + '\n', (err) => {
+  fs.appendFile('server.log', log + '\n', (err) => {
     if(err) {
       console.log('Unable to append to server.log.')
     }
